@@ -5,7 +5,7 @@ class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.IntegerField(default=0)
     category = models.ForeignKey(Category, default = 1,on_delete=models.CASCADE)
-    desc = models.CharField(max_length=100, default='', null=True, blank=True)
+    desc = models.CharField(max_length=500, default='', null=True, blank=True)
     image = models.ImageField(upload_to='uploads/products')
 
 

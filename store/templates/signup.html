@@ -3,18 +3,10 @@
 <div class="container">
   <div class="p-4 m-4">
     <div class="col-lg-6 mx-auto border rounded p-4">
-      <p style="text-align: center">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Shopping_cart_with_food_clip_art_2.svg/307px-Shopping_cart_with_food_clip_art_2.svg.png"
-          alt=""
-          class=""
-          style="height: 150px"
-        />
-      </p>
       <h3 class="alert alert-light border rounded">Create an account</h3>
-
       <form action="/signup" method="POST">
-        {% csrf_token %} {% if error %}
+        {% csrf_token %} 
+        {% if error %}
         <div class="alert alert-danger" role="alert">{{error}}</div>
         {% endif %}
         <!-- First Name -->
