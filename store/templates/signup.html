@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <div class="p-4 m-4">
+    <div class="col-lg-6 mx-auto border rounded p-4">
+      <p style="text-align: center">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Shopping_cart_with_food_clip_art_2.svg/307px-Shopping_cart_with_food_clip_art_2.svg.png"
+          alt=""
+          class=""
+          style="height: 150px"
+        />
+      </p>
+      <h3 class="alert alert-light border rounded">Create an account</h3>
+
+      <form action="/signup" method="POST">
+        {% csrf_token %} {% if error %}
+        <div class="alert alert-danger" role="alert">{{error}}</div>
+        {% endif %}
+        <!-- First Name -->
+        <div class="form-group pt-2">
+          <label for="">First Name :</label>
+          <input
+            type="text"
+            name="firstname"
+            id=""
+            value="{{values.first_name}}"
+            class="form-control"
+            placeholder="Enter First Name"
+          />
+        </div>
+
+        <!-- last Name -->
+        <div class="form-group pt-2">
+          <label for="">Last Name :</label>
+          <input
+            type="text"
+            name="lastname"
+            id=""
+            value="{{values.last_name}}"
+            class="form-control"
+            placeholder="Enter Last Name"
+          />
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group pt-2">
+          <label for="">Phone :</label>
+          <input
+            type="text"
+            name="phone"
+            id=""
+            value="{{values.phone}}"
+            class="form-control"
+            placeholder="Enter Phone Number"
+          />
+        </div>
+
+        <!-- email -->
+        <div class="form-group pt-2">
+          <label for="">Email :</label>
+          <input
+            type="email"
+            name="email"
+            id=""
+            value="{{values.email}}"
+            class="form-control"
+            placeholder="example@gmail.com"
+          />
+        </div>
+
+        <!-- password -->
+        <div class="form-group pt-2">
+          <label for="">Password :</label>
+          <input
+            type="password"
+            name="password"
+            id=""
+            class="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            class="btn btn-sm btn-info mt-3 mx-auto"
+            type="submit"
+            value="Create An Account"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
