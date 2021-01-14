@@ -82,6 +82,7 @@
         <div class="m-2 p-2">
           <form action="/check-out" method="POST">
             {% csrf_token %}
+              
             <div class="form-group">
               <label for="">Address</label>
               <input
@@ -89,7 +90,7 @@
                 name="address"
                 id=""
                 class="form-control"
-                placeholder=""
+                placeholder="Enter Address"
                
               />
             </div>
@@ -100,7 +101,7 @@
                 name="phone"
                 id=""
                 class="form-control"
-                placeholder=""
+                placeholder="Enter phone number"
                 
               />
             </div>
