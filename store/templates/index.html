@@ -29,7 +29,7 @@
         <div class="card mx-auto mb-3" id="{{product.id}}" style="width: 18rem">
           <img src="{{product.image.url}}" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">{{product.name}}</h5>
+            <a href="/?id={{ product.id }}" id="link" style="text-decoration:none; color:black;"><h5 class="card-title">{{product.name}}</h5></a>
             <p class="card-text">Price : <b>{{product.price|currency}}</b></p>
           </div>
 
@@ -78,8 +78,10 @@
                 type="submit"
                 class="float-right btn btn-light border form-control"
               />
-            </form>
+            
             {% endif %}
+            <a class="btn btn-primary float-right form-control" href="/?id={{ product.id }}">View</a>
+          </form>
           </div>
         </div>
 
